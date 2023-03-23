@@ -7,13 +7,13 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddHttpContextAccessor();  
-builder.Services.AddSession();  
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession();
 
-builder.Services.AddDbContext<MyContext>(options =>
-{
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
-});
+// builder.Services.AddDbContext<MyContext>(options =>
+// {
+//     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+// });
 
 
 var app = builder.Build();
@@ -28,7 +28,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.UseSession();    
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
