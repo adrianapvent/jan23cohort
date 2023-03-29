@@ -1,12 +1,15 @@
-package assignments.Java.week1.BankAcct;
+// package assignments.Java.week1.BankAccount;
 
-public class BankAcct {
+import java.util.ArrayList;
+import java.util.Date;
+
+public class BankAccount {
     private double checkingBalance;
     private double savingsBalance;
     private static int numOfAccts;
     private static double totalMoneyInAccts;
 
-    public BankAcct() {
+    public void BankAccount() {
         this.checkingBalance = 0;
         this.savingsBalance = 0;
         this.totalMoneyInAccts = 0;
@@ -23,15 +26,15 @@ public class BankAcct {
         return this.savingsBalance;
     }
 
-    public double deposit(double amount, String account){
+    public double totalMoneyInAccts(String account){
         if(account.equals("checkings")) {
-            this.checkingBalance += amount;
-            BankAcct.totalMoneyInAccts += amount;
-            return this.checkingBalance;
+            // this.checkingBalance += amount;
+            totalMoneyInAccts += this.checkingBalance;
+            return totalMoneyInAccts;
         } else if (account.equals("savings")) {
-            this.savingsBalance += amount;
-            BankAcct.totalMoneyInAccts += amount;
-            return this.savingsBalance;
+            // this.savingsBalance += amount;
+            totalMoneyInAccts += this.savingsBalance;
+            return totalMoneyInAccts;
         } else {
             return 404;
         }
@@ -56,6 +59,30 @@ public class BankAcct {
 
 //total amount of money in accts.
     public static void printTotalMoneyInAccts() {
-        System.out.println("Total amount of money in checking ans savings account: " + totalMoneyInAccts);
+        System.out.println("Total amount of money in checking and savings account: " + totalMoneyInAccts);
+    }
+
+    public double depositFunds(double funds, String account) {
+        if(account.equals("checkings")) {
+            this.checkingBalance += funds;
+            return checkingBalance;
+        } else if(account.equals("savings")) {
+            this.savingsBalance += funds;
+            return savingsBalance;
+        } else {
+            return -1;
+        }
+    }
+
+    public double withdrawFunds(double funds, String account) {
+        if(account.equals("checkings") && this.checkingBalance > funds) {
+            this.checkingBalance -= funds;
+            return checkingBalance;
+        } else if(account.equals("savings") && this.savingsBalance > funds) {
+            this.savingsBalance -= funds;
+            return savingsBalance;
+        } else {
+            return -1;
+        }
     }
 }
