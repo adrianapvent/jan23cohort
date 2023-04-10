@@ -27,7 +27,7 @@
 <body>
     <!-- HEADER -->
     <header>
-        <h1>Testing</h1>
+        <h1>Daikichi</h1>
         <nav>
 		
         </nav>
@@ -35,6 +35,7 @@
     <!-- MAIN -->
     <main>
 	
+		<h1>hello, this is now working!</h1>
     </main>
     <!-- FOOTER -->
     <footer>
