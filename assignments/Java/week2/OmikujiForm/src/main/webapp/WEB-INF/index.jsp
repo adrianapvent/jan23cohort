@@ -47,7 +47,7 @@
 		<div class="border text-center py-3">
 			<h3>Send an Omikuji!</h3>
 		</div>
-		<form:form action="/submit" method="POST" class="mx-5 my-2">
+		<form action="/submit" method="POST" class="mx-5 my-2">
 			<div class="d-flex flex-coumn">
 				<label class="form-label"> Pick any number from 5 to 25:</label> <input
 					type="number" name="num" class="form-control">
@@ -75,7 +75,7 @@
 			<p>Send and show to a friend</p>
 
 			<button class="btn btn-secondary my-1 w-100">Send</button>
-		</form:form>
+		</form>
 	</main>
 	<!-- FOOTER -->
 	<footer> </footer>

@@ -22,7 +22,7 @@ public class HomeController {
 	// @Autowired
 	// private <SERVICE_NAME> <service_name>;
 
-	@GetMapping("/") // reserve route
+	@RequestMapping("/") // reserve route
 	public String index() {
 		return "index.jsp"; // map route to jsp
 	}
