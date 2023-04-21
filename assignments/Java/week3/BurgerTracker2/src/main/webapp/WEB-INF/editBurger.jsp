@@ -41,7 +41,7 @@
         <div class="d-flex flex-column  align-items-center">
             <h1 class="w-75">Burger Tracker</h1>
            
-            <form:form action="/burger/${burger.id}/update}" method="post" modelAttribute="burgerForm" class="d-flex flex-column align-items-end py-2 w-auto">
+            <form:form action="/burger/${burger.id}/update" method="post" modelAttribute="burgerForm" class="d-flex flex-column align-items-end py-2 w-auto">
             	<input type="hidden" name="_method" value="put">
             	
                 <div class="d-flex flex-row justify-content-evenly p-2">

@@ -33,7 +33,7 @@ public class HomeController {
 
 	@GetMapping("/dojos/new")
 	public String index(@ModelAttribute(value = "dojo") Dojo dojo) {
-		return "index.js";
+		return "index.jsp";
 	}
 
 	@PostMapping("/dojos/create")
@@ -48,7 +48,7 @@ public class HomeController {
 	@GetMapping("/ninjas/new")
 	public String newNinja(@ModelAttribute(value = "ninja") Ninja ninja, Model model) {
 		model.addAttribute("dojos", dojoService.allDojos());
-		return "newninja.jsp";
+		return "newNinja.jsp";
 	}
 
 	@PostMapping("/ninjas/create")

@@ -38,6 +38,17 @@
     </header>
     <!-- MAIN -->
     <main>
+    <div class="container mt-5">
+		<h1 class="display-3">New Dojo</h1>
+        <form:form action="/dojos/create" method="post" modelAttribute="dojo" class="col-4">
+            <div class="my-3">
+                <form:label path="name" class="form-label">Name:</form:label>
+                <form:input path="name" type="text" class="form-control"/>
+                <form:errors path="name" class="text-danger"/>
+            </div>
+            <button class="btn btn-primary float-end">Submit</button>
+        </form:form>
+	</div>
 
     </main>
     <!-- FOOTER -->
